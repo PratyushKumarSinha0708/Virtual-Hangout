@@ -1,0 +1,61 @@
+.landingPage{
+    background-image: url("background.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    padding-block: 1.5rem;
+    align-items: center;
+}
+
+.navbar .navbar-list {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.navbar .navbar-list Button{ 
+    color: beige;
+}
+
+.navbar .navbar-title{
+    font-size: 1.8rem;
+    color: #6a1d99;
+}
+
+.mainContainer{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5rem ;
+}
+
+.mainContainer .illustration{
+    height: 80vh;
+    width: auto;
+}
+
+.mainContainer .tagline{
+    font-size: 2rem;
+}
+
+.mainContainer .get-started{
+    width: 10.5rem;
+    padding: .6rem;
+    border: 1px solid #F67B31;
+    border-radius: .8rem;
+    background-color: #F67B31;
+    margin-top: 2rem;
+}
+
+.mainContainer .get-started .link {
+    text-decoration: none;
+    background-color: #F67B31;
+    color: #092D59;
+}

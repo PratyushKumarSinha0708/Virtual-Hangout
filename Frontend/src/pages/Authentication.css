@@ -1,0 +1,14 @@
+.MuiGrid-root{
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MuiPaper-root{
+    height: 70vh;
+    width: 30vw;
+}
+
