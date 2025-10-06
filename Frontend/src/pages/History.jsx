@@ -42,7 +42,7 @@ export default function History() {
     }
 
     return (
-        <div style={{backgroundImage:"url(background.png)" , height :"100vh", width: "100vw", backgroundRepeat: "norepeat"}}>
+        <div style={{backgroundImage:"url(../public/background.png)" , height :"100vh", width: "100vw", backgroundRepeat: "norepeat"}}>
 
             <IconButton onClick={() => {
                 routeTo("/home")
