@@ -15,7 +15,7 @@ import io from 'socket.io-client'
 import './VideoMeet.css'
 import { useNavigate } from 'react-router-dom';
 
-const server_url = "http://localhost:8000";
+const server_url = "https://virtual-hangout-backend.onrender.com";
 
 const connections = {};
 
