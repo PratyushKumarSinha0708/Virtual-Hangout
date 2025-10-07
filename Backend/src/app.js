@@ -16,7 +16,7 @@ app.use(cors({
     "http://localhost:5173",               // local frontend
     "https://virtual-hangout-backend.onrender.com" // deployed frontend
   ],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  methods: ["GET", "POST"],
   credentials: true,
 }));
 app.use(express.json());
@@ -25,7 +25,7 @@ app.use(express.urlencoded({limit : "40kb" , extended : true}))
 
 app.use("/api/v1/users",userRoutes)
 
-app.set("port" , (process.env.PORT || 8080 ))
+app.set("port" , (process.env.PORT || 8000 ))
 
 app.get("/",(req,res)=>{
     res.send("hello world");
@@ -35,7 +35,7 @@ const start = async () => {
     const connectionDb = await mongoose.connect("mongodb+srv://pratyushsinha2003_db_user:dKtxUZ5Gobh8Rxgm@cluster0.7bnismk.mongodb.net/");
     console.log(`mongo db connected ${connectionDb.connection.host}`)
     server.listen(app.get("port"), () => {
-        console.log("listening on port 8080");
+        console.log("listening on port 8000");
     });
 }
 start();
