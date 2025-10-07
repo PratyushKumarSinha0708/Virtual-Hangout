@@ -14,7 +14,7 @@ const io = connectToSocket(server);
 app.use(cors({
   origin: [
     "http://localhost:5173",               // local frontend
-    "https://virtual-hangout-backend.onrender.com" // deployed frontend
+    "https://virtual-hangout-frontend.onrender.com" // deployed frontend
   ],
   methods: ["GET", "POST"],
   credentials: true,
