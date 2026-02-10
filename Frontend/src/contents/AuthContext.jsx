@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const AuthContext = createContext({});
 
 const client = axios.create({
-    baseURL: "https://virtual-hangout-backend.onrender.com"
+    baseURL: "https://virtual-hangout-backend.onrender.com/api/v1/users"
 })
 
 export const AuthProvider = ({ children }) => {
@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
 
     const handleRegister = async (name, username, password) => {
         try {
-            let request = await client.post("/api/v1/users/register", {
+            let request = await client.post("/register", {
                 name: name,
                 username: username,
                 password: password
@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
 
     const handleLogin = async (username, password) => {
         try {
-            let request = await client.post("/api/v1/users/login", {
+            let request = await client.post("/login", {
                 username: username,
                 password: password
             });
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
 
     const getHistoryOfUser = async () => {
         try {
-            let request = await client.get("/api/v1/users/get_all_activity", {
+            let request = await client.get("/get_all_activity", {
                 params: {
                     token: localStorage.getItem("token")
                 }
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
 
     const addToUserHistory = async (meeting_Code) => {
         try {
-            let request = await client.post("/api/v1/users/add_to_activity", {
+            let request = await client.post("/add_to_activity", {
                 token: localStorage.getItem("token"),
                 meeting_code : meeting_Code,
             });
