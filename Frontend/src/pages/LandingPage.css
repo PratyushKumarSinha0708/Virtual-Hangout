@@ -37,8 +37,25 @@
 }
 
 .mainContainer .illustration{
-    height: 80vh;
+    height: 50vh;
     width: auto;
+}
+
+@media (max-width: 1240px) {
+  .mainContainer .illustration {
+    display: none;    
+  }
+}
+
+@media (min-width: 2095px) {
+  .mainContainer .illustration {
+    height: 70vh;  
+    width: auto;
+  }
+  .illustration img {
+    height: 50vh;
+    width : auto;
+  }
 }
 
 .mainContainer .tagline{
@@ -58,4 +75,8 @@
     text-decoration: none;
     background-color: #F67B31;
     color: #092D59;
+}
+
+.hamburger-icon {
+    color: #6a1d99;
 }
