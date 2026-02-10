@@ -90,7 +90,9 @@ export default function LandingPage() {
       )}
       <div className="mainContainer">
         <div className="tagline">
-          <span><h1 style={{ color: "#1e9037ff" }}>Hangout Virtually!!</h1></span><p>with your loved ones</p>
+          <span>{!isMobile && (<h1 style={{ color: "#1e9037ff" }}>Hangout Virtually!!</h1>)}
+          {isMobile && (<h3 style={{ color: "#1e9037ff" }}>Hangout Virtually!!</h3>)}
+          </span><p>with your loved ones</p>
           <div className="get-started" role='button'><Link to={"/auth"} className='link'>Get Started
           </Link></div>
         </div>
