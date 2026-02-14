@@ -484,21 +484,22 @@ function VideoMeet() {
 
 
     return (
-        <div>
+        <div className='initial-page'>
             {askForUsername === true ?
-                <div>
+                <div className='username-container'>
 
-                    <h2>Enter into lobby</h2>
+                    <h2 style={{margin : "5px"}}>Enter into lobby</h2>
 
-                    <TextField id="outlined-basic" label="username" value={username} variant="outlined" onChange={(e) => { setUsername(e.currentTarget.value) }} />
+                    <TextField id="outlined-basic" label="username" value={username} variant="outlined" onChange={(e) => { setUsername(e.currentTarget.value) }} sx={{margin : "5px"}} />
 
-                    <Button variant="contained" onClick={connect}>Connect</Button>
+                    <Button variant="contained" onClick={connect} sx={{margin : "5px"}} >Connect</Button>
 
-                    <div>
+                    <div >
                         <video
                             ref={localVideoRef}
                             autoPlay
                             muted
+                            className='video-box'
                         />
                     </div>
 
@@ -580,3 +581,4 @@ function VideoMeet() {
 }
 
 export default VideoMeet
+

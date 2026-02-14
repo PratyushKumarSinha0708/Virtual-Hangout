@@ -17,6 +17,8 @@ import "./Authentication.css"
 import { Snackbar } from '@mui/material';
 import { AuthContext } from '../contents/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { useMediaQuery } from '@mui/material';
+import { useTheme } from "@mui/material/styles";
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
@@ -31,6 +33,8 @@ export default function Authentication() {
     const [message, setMessage] = useState();
     const [formState, setFormState] = useState(0);
     const [open, setOpen] = useState(false);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     const navigate = useNavigate();
 
@@ -68,7 +72,13 @@ export default function Authentication() {
     return (
         <ThemeProvider theme={defaultTheme}>
             <Grid container component="main" sx={{ height: '100vh' }} >
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square className='form-container'>
+
+                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square className='form-container'
+                    sx={{
+                        width: isMobile ? "250px" : "100%",
+                        maxWidth: "400px",
+                        margin: "auto"
+                    }}>
                     <Box
                         sx={{
                             my: 8,
